@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Gandu</title>
+    <style>
+        body {
+            background-color: #111;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        .neon-border {
+            position: relative;
+            padding: 20px;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .neon-text {
+            font-size: 3em;
+            letter-spacing: 4px;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(90deg, #0ff, #f06, #0ff);
+            background-size: 200% 200%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: neonGlow 2s linear infinite, moveUpDown 2s ease-in-out infinite;
+            font-weight: bold;
+        }
+
+        @keyframes neonGlow {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 0%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .neon-text {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-border">
+        <h1 class="neon-text">Aries Gandu</h1>
+    </div>
+</body>
+</html>
